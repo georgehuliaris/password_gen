@@ -21,12 +21,12 @@ function generatePassword() {
   var characterLengthNumber = parseFloat(characterLength);
 //This prompts user to select a number if it is not a number
   if (isNaN(characterLengthNumber) === true) {
-    alert("You should try picking a number?");
+    alert("You should try picking a number.");
     return generatedPassword;
   }
 // This makes sure the users input of the number is in between 8 and 128
   if (characterLengthNumber < 8 || characterLengthNumber > 128) {
-    alert("Nah, that won't work, but it would if you picked a number in between let's say 8 and 128!");
+    alert("Sorry, that won't work, please pick a number in between 8 and 128.");
     return generatedPassword;
   }
   // this asks the user if they would like to use special characters, true or false
@@ -49,7 +49,7 @@ function generatePassword() {
   
   // if they dont select a character set, it will show them this message
   if (!lowerCharacterBoolean && !capitalCharactersBoolean && !specialCharactersBoolean && !numberCharactersBoolean) {
-    alert("Uhh... you gotta pick something...");
+    alert("Please approve at least one option.");
     return generatedPasswordgit;
   }
 
